@@ -12,9 +12,6 @@ namespace OpenDoorsAPI.Models
         [BsonElement("jobName")]
         public string JobName { get; set; }
 
-        [BsonElement("jobType")]
-        public string JobType { get; set; }
-
         [BsonElement("skills")]
         public string Skills { get; set; }
 

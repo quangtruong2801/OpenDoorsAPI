@@ -18,6 +18,15 @@ namespace OpenDoorsAPI.Models
         [BsonElement("email")]
         public string Email { get; set; }
 
+        [BsonElement("birthday")]
+        public string Birthday { get; set; }   
+
+        [BsonElement("hobbies")]
+        public string Hobbies { get; set; }    
+
+        [BsonElement("socials")]
+        public string Socials { get; set; }
+
         [BsonElement("startDate")]
         public string StartDate { get; set; }
 

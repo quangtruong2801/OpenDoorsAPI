@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,12 +31,8 @@
       "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,8 +43,8 @@
       "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\services\\teamservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|d:\\codeeee\\react\\opendoors\\opendoorsapi\\opendoorsapi\\opendoorsapi\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{187D40A4-CFE2-4A0A-AE26-6B057B2BAF8C}|OpenDoorsAPI\\OpenDoorsAPI.csproj|solutionrelative:opendoorsapi\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,13 +62,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "JobsController.cs",
               "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\JobsController.cs",
               "RelativeDocumentMoniker": "OpenDoorsAPI\\Controllers\\JobsController.cs",
               "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\JobsController.cs",
               "RelativeToolTip": "OpenDoorsAPI\\Controllers\\JobsController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T08:24:21.616Z",
               "EditorCaption": ""
@@ -76,19 +76,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\JobService.cs",
+              "RelativeDocumentMoniker": "OpenDoorsAPI\\Services\\JobService.cs",
+              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\JobService.cs",
+              "RelativeToolTip": "OpenDoorsAPI\\Services\\JobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T08:24:00.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MembersController.cs",
+              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\MembersController.cs",
+              "RelativeDocumentMoniker": "OpenDoorsAPI\\Controllers\\MembersController.cs",
+              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\MembersController.cs",
+              "RelativeToolTip": "OpenDoorsAPI\\Controllers\\MembersController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwCwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T03:45:54.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeamsController.cs",
+              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\TeamsController.cs",
+              "RelativeDocumentMoniker": "OpenDoorsAPI\\Controllers\\TeamsController.cs",
+              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\TeamsController.cs",
+              "RelativeToolTip": "OpenDoorsAPI\\Controllers\\TeamsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T03:46:09.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Member.cs",
+              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "OpenDoorsAPI\\Models\\Member.cs",
+              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Models\\Member.cs",
+              "RelativeToolTip": "OpenDoorsAPI\\Models\\Member.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T03:46:27.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Job.cs",
               "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Models\\Job.cs",
               "RelativeDocumentMoniker": "OpenDoorsAPI\\Models\\Job.cs",
               "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Models\\Job.cs",
               "RelativeToolTip": "OpenDoorsAPI\\Models\\Job.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T08:23:37.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\appsettings.json",
               "RelativeDocumentMoniker": "OpenDoorsAPI\\appsettings.json",
@@ -101,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Program.cs",
               "RelativeDocumentMoniker": "OpenDoorsAPI\\Program.cs",
@@ -111,70 +163,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T08:22:11.196Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Member.cs",
-              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "OpenDoorsAPI\\Models\\Member.cs",
-              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Models\\Member.cs",
-              "RelativeToolTip": "OpenDoorsAPI\\Models\\Member.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T03:46:27.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MembersController.cs",
-              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\MembersController.cs",
-              "RelativeDocumentMoniker": "OpenDoorsAPI\\Controllers\\MembersController.cs",
-              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\MembersController.cs",
-              "RelativeToolTip": "OpenDoorsAPI\\Controllers\\MembersController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwCkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T03:45:54.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JobService.cs",
-              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\JobService.cs",
-              "RelativeDocumentMoniker": "OpenDoorsAPI\\Services\\JobService.cs",
-              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\JobService.cs",
-              "RelativeToolTip": "OpenDoorsAPI\\Services\\JobService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T08:24:00.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MemberService.cs",
-              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\MemberService.cs",
-              "RelativeDocumentMoniker": "OpenDoorsAPI\\Services\\MemberService.cs",
-              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\MemberService.cs",
-              "RelativeToolTip": "OpenDoorsAPI\\Services\\MemberService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T03:47:06.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TeamsController.cs",
-              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\TeamsController.cs",
-              "RelativeDocumentMoniker": "OpenDoorsAPI\\Controllers\\TeamsController.cs",
-              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Controllers\\TeamsController.cs",
-              "RelativeToolTip": "OpenDoorsAPI\\Controllers\\TeamsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T03:46:09.055Z"
             },
             {
               "$type": "Document",
@@ -199,7 +187,21 @@
               "RelativeToolTip": "OpenDoorsAPI\\Services\\TeamService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T03:47:23.42Z"
+              "WhenOpened": "2025-09-29T03:47:23.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MemberService.cs",
+              "DocumentMoniker": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\MemberService.cs",
+              "RelativeDocumentMoniker": "OpenDoorsAPI\\Services\\MemberService.cs",
+              "ToolTip": "D:\\Codeeee\\React\\OpenDoors\\OpenDoorsAPI\\OpenDoorsAPI\\OpenDoorsAPI\\Services\\MemberService.cs",
+              "RelativeToolTip": "OpenDoorsAPI\\Services\\MemberService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T03:47:06.699Z",
+              "EditorCaption": ""
             }
           ]
         }
