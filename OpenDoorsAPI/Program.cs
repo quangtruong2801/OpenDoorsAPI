@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Services
 builder.Services.AddSingleton<MemberService>();
 builder.Services.AddSingleton<TeamService>();
+builder.Services.AddSingleton<JobService>();
+
 
 builder.Services.AddControllers();
 
