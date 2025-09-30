@@ -14,3 +14,6 @@ obj/
 # Others
 *.log
 *.vsconfig
+
+# App settings (development secrets)
+appsettings.Development.json
