@@ -1,8 +1,18 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Collections.Generic;
 
 namespace OpenDoorsAPI.Models
 {
+    public class Social
+    {
+        [BsonElement("platform")]
+        public string Platform { get; set; }
+
+        [BsonElement("url")]
+        public string Url { get; set; }
+    }
+
     public class Member
     {
         [BsonId]
@@ -19,13 +29,13 @@ namespace OpenDoorsAPI.Models
         public string Email { get; set; }
 
         [BsonElement("birthday")]
-        public string Birthday { get; set; }   
+        public string Birthday { get; set; }
 
         [BsonElement("hobbies")]
-        public string Hobbies { get; set; }    
+        public string Hobbies { get; set; }
 
         [BsonElement("socials")]
-        public string Socials { get; set; }
+        public List<Social> Socials { get; set; } = new List<Social>(); 
 
         [BsonElement("startDate")]
         public string StartDate { get; set; }
@@ -34,7 +44,7 @@ namespace OpenDoorsAPI.Models
         public string Type { get; set; }
 
         [BsonElement("jobType")]
-        public string JobType { get; set; }
+        public List<string> JobType { get; set; } = new List<string>();
 
         [BsonElement("team")]
         public string Team { get; set; }
