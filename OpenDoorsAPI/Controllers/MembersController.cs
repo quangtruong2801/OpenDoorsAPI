@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OpenDoorsAPI.Models;
 using OpenDoorsAPI.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace OpenDoorsAPI.Controllers
 {
@@ -16,21 +18,20 @@ namespace OpenDoorsAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Member>>> Get() => Ok(await _service.GetAllAsync());
+        public async Task<ActionResult<List<Member>>> Get() =>
+            Ok(await _service.GetAllAsync());
 
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Member>> GetById(string id)
         {
             var member = await _service.GetByIdAsync(id);
-            return member is null ? NotFound() : Ok(member);
+            return member == null ? NotFound() : Ok(member);
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Member member)
         {
-            // 🔥 Không cho phép client tự truyền Id
-            member.Id = null;
-
+            member.Id = null; // 🔹 Không cho client tự truyền Id
             await _service.CreateAsync(member);
             return CreatedAtAction(nameof(GetById), new { id = member.Id }, member);
         }
@@ -39,11 +40,9 @@ namespace OpenDoorsAPI.Controllers
         public async Task<IActionResult> Update(string id, [FromBody] Member member)
         {
             var existing = await _service.GetByIdAsync(id);
-            if (existing is null) return NotFound();
+            if (existing == null) return NotFound();
 
-            // 🔥 Giữ nguyên Id cũ
-            member.Id = existing.Id;
-
+            member.Id = existing.Id; // 🔹 Giữ nguyên Id cũ
             await _service.UpdateAsync(id, member);
             return NoContent();
         }
@@ -52,9 +51,9 @@ namespace OpenDoorsAPI.Controllers
         public async Task<IActionResult> Delete(string id)
         {
             var existing = await _service.GetByIdAsync(id);
-            if (existing is null) return NotFound();
+            if (existing == null) return NotFound();
 
-            await _service.DeleteAsync(id);
+            await _service.DeleteAsync(id); // 🔹 Xóa member + ảnh trên Cloudinary
             return NoContent();
         }
     }

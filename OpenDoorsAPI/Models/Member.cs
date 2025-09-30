@@ -22,6 +22,9 @@ namespace OpenDoorsAPI.Models
         [BsonElement("avatar")]
         public string Avatar { get; set; }
 
+        [BsonElement("avatarPublicId")]
+        public string AvatarPublicId { get; set; }
+
         [BsonElement("name")]
         public string Name { get; set; }
 
