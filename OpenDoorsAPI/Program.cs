@@ -31,6 +31,7 @@ builder.Services.AddSingleton<CloudinaryService>();
 builder.Services.AddSingleton<MemberService>();
 builder.Services.AddSingleton<TeamService>();
 builder.Services.AddSingleton<JobService>();
+builder.Services.AddSingleton<RecruitmentService>();
 
 // Controllers
 builder.Services.AddControllers();
