@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OpenDoorsAPI.Models;
 using OpenDoorsAPI.Services;
+using System;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace OpenDoorsAPI.Controllers
 {
@@ -17,7 +22,7 @@ namespace OpenDoorsAPI.Controllers
             _memberService = memberService;
         }
 
-        // GET: api/teams
+        // ---------------- GET ALL TEAMS + member count ----------------
         [HttpGet]
         public async Task<IActionResult> GetTeamsWithMemberCount()
         {
@@ -29,12 +34,13 @@ namespace OpenDoorsAPI.Controllers
                 Id = team.Id,
                 TeamName = team.TeamName,
                 CreatedDate = team.CreatedDate,
-                Members = members.Count(m => m.TeamId == team.Id) // ✅ số lượng member theo teamID
+                Members = members.Count(m => m.TeamId == team.Id)
             }).ToList();
 
             return Ok(result);
         }
 
+        // ---------------- GET TEAM BY ID ----------------
         [HttpGet("{id:length(24)}")]
         public async Task<IActionResult> GetById(string id)
         {
@@ -42,15 +48,20 @@ namespace OpenDoorsAPI.Controllers
             return team is null ? NotFound() : Ok(team);
         }
 
+        // ---------------- CREATE TEAM (Admin Only) ----------------
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Team team)
         {
             team.CreatedDate = DateTime.UtcNow;
             team.Id = null;
+
             await _teamService.CreateAsync(team);
             return CreatedAtAction(nameof(GetById), new { id = team.Id }, team);
         }
 
+        // ---------------- UPDATE TEAM (Admin Only) ----------------
+        [Authorize(Roles = "admin")]
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, [FromBody] Team team)
         {
@@ -59,10 +70,13 @@ namespace OpenDoorsAPI.Controllers
 
             team.Id = existing.Id;
             team.CreatedDate = existing.CreatedDate;
+
             await _teamService.UpdateAsync(id, team);
             return NoContent();
         }
 
+        // ---------------- DELETE TEAM (Admin Only) ----------------
+        [Authorize(Roles = "admin")]
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {

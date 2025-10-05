@@ -1,6 +1,5 @@
 ﻿using MongoDB.Driver;
 using OpenDoorsAPI.Models;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,37 +9,32 @@ namespace OpenDoorsAPI.Services
     {
         private readonly IMongoCollection<Recruitment> _recruitments;
 
-        public RecruitmentService(IConfiguration config)
+        public RecruitmentService(IMongoDatabase database)
         {
-            var client = new MongoClient(config["MongoDB:ConnectionString"]);
-            var database = client.GetDatabase(config["MongoDB:DatabaseName"]);
-            _recruitments = database.GetCollection<Recruitment>(config["MongoDB:RecruitmentsCollection"]);
+            _recruitments = database.GetCollection<Recruitment>("Recruitments"); // collection cố định
         }
 
-        public async Task<List<Recruitment>> GetListAsync()
-        {
-            return await _recruitments.Find(_ => true).ToListAsync();
-        }
+        // ---------------- GET LIST ----------------
+        public async Task<List<Recruitment>> GetListAsync() =>
+            await _recruitments.Find(_ => true).ToListAsync();
 
-        public async Task<Recruitment> GetByIdAsync(string id)
-        {
-            return await _recruitments.Find(r => r.Id == id).FirstOrDefaultAsync();
-        }
+        // ---------------- GET BY ID ----------------
+        public async Task<Recruitment?> GetByIdAsync(string id) =>
+            await _recruitments.Find(r => r.Id == id).FirstOrDefaultAsync();
 
-        public async Task<Recruitment> CreateAsync(Recruitment recruitment)
+        // ---------------- CREATE ----------------
+        public async Task CreateAsync(Recruitment recruitment)
         {
+            recruitment.Id = null; // không cho client set Id
             await _recruitments.InsertOneAsync(recruitment);
-            return recruitment;
         }
 
-        public async Task UpdateAsync(string id, Recruitment recruitment)
-        {
+        // ---------------- UPDATE ----------------
+        public async Task UpdateAsync(string id, Recruitment recruitment) =>
             await _recruitments.ReplaceOneAsync(r => r.Id == id, recruitment);
-        }
 
-        public async Task DeleteAsync(string id)
-        {
+        // ---------------- DELETE ----------------
+        public async Task DeleteAsync(string id) =>
             await _recruitments.DeleteOneAsync(r => r.Id == id);
-        }
     }
 }

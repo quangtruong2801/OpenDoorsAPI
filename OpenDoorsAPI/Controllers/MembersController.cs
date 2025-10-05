@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OpenDoorsAPI.Models;
 using OpenDoorsAPI.Services;
 using System.Collections.Generic;
@@ -17,10 +18,14 @@ namespace OpenDoorsAPI.Controllers
             _service = service;
         }
 
+        // ---------------- GET ALL MEMBERS ----------------
+        [Authorize] // ✅ Bắt buộc đăng nhập mới được xem danh sách
         [HttpGet]
         public async Task<ActionResult<List<Member>>> Get() =>
             Ok(await _service.GetAllAsync());
 
+        // ---------------- GET MEMBER BY ID ----------------
+        [Authorize] // ✅ Bắt buộc đăng nhập
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Member>> GetById(string id)
         {
@@ -28,32 +33,38 @@ namespace OpenDoorsAPI.Controllers
             return member == null ? NotFound() : Ok(member);
         }
 
+        // ---------------- CREATE MEMBER (Admin Only) ----------------
+        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được tạo
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Member member)
         {
-            member.Id = null; // 🔹 Không cho client tự truyền Id
+            member.Id = null;
             await _service.CreateAsync(member);
             return CreatedAtAction(nameof(GetById), new { id = member.Id }, member);
         }
 
+        // ---------------- UPDATE MEMBER (Admin Only) ----------------
+        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được sửa
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, [FromBody] Member member)
         {
             var existing = await _service.GetByIdAsync(id);
             if (existing == null) return NotFound();
 
-            member.Id = existing.Id; // 🔹 Giữ nguyên Id cũ
+            member.Id = existing.Id;
             await _service.UpdateAsync(id, member);
             return NoContent();
         }
 
+        // ---------------- DELETE MEMBER (Admin Only) ----------------
+        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được xóa
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
             var existing = await _service.GetByIdAsync(id);
             if (existing == null) return NotFound();
 
-            await _service.DeleteAsync(id); // 🔹 Xóa member + ảnh trên Cloudinary
+            await _service.DeleteAsync(id);
             return NoContent();
         }
     }
