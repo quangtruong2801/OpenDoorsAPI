@@ -36,8 +36,13 @@ namespace OpenDoorsAPI.Services
 
         public async Task UpdateAsync(string id, Member member)
         {
-            // 🔹 Nếu password được cập nhật, hash lại
-            if (!string.IsNullOrEmpty(member.Password))
+            var existing = await _members.Find(m => m.Id == id).FirstOrDefaultAsync();
+            if (existing == null) return;
+
+            // Giữ password cũ nếu không có password mới
+            if (string.IsNullOrWhiteSpace(member.Password))
+                member.Password = existing.Password;
+            else
                 member.Password = HashPassword(member.Password);
 
             await _members.ReplaceOneAsync(m => m.Id == id, member);
