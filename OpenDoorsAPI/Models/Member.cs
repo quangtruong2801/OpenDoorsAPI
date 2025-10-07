@@ -54,5 +54,11 @@ namespace OpenDoorsAPI.Models
 
         [BsonElement("teamId")]
         public string TeamId { get; set; }
+
+        [BsonElement("role")]
+        public string Role { get; set; } = "admin";
+
+        [BsonElement("password")]
+        public string Password { get; set; }
     }
 }

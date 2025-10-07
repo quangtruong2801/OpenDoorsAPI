@@ -1,5 +1,8 @@
 ﻿using MongoDB.Driver;
 using OpenDoorsAPI.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace OpenDoorsAPI.Services
 {
@@ -7,17 +10,38 @@ namespace OpenDoorsAPI.Services
     {
         private readonly IMongoCollection<Team> _teams;
 
-        public TeamService(IConfiguration config)
+        public TeamService(IMongoDatabase database)
         {
-            var client = new MongoClient(config["MongoDB:ConnectionString"]);
-            var database = client.GetDatabase(config["MongoDB:DatabaseName"]);
-            _teams = database.GetCollection<Team>(config["MongoDB:TeamsCollection"]);
+            _teams = database.GetCollection<Team>("Teams");
         }
 
-        public async Task<List<Team>> GetAllAsync() => await _teams.Find(_ => true).ToListAsync();
-        public async Task<Team?> GetByIdAsync(string id) => await _teams.Find(t => t.Id == id).FirstOrDefaultAsync();
-        public async Task CreateAsync(Team team) => await _teams.InsertOneAsync(team);
-        public async Task UpdateAsync(string id, Team team) => await _teams.ReplaceOneAsync(t => t.Id == id, team);
-        public async Task DeleteAsync(string id) => await _teams.DeleteOneAsync(t => t.Id == id);
+        // ---------------- GET ALL ----------------
+        public async Task<List<Team>> GetAllAsync() =>
+            await _teams.Find(_ => true).ToListAsync();
+
+        // ---------------- GET BY ID ----------------
+        public async Task<Team?> GetByIdAsync(string id) =>
+            await _teams.Find(t => t.Id == id).FirstOrDefaultAsync();
+
+        // ---------------- CREATE ----------------
+        public async Task CreateAsync(Team team)
+        {
+            if (team.CreatedDate == default)
+                team.CreatedDate = DateTime.UtcNow;
+
+            await _teams.InsertOneAsync(team);
+        }
+
+        // ---------------- UPDATE ----------------
+        public async Task UpdateAsync(string id, Team team)
+        {
+            await _teams.ReplaceOneAsync(t => t.Id == id, team);
+        }
+
+        // ---------------- DELETE ----------------
+        public async Task DeleteAsync(string id)
+        {
+            await _teams.DeleteOneAsync(t => t.Id == id);
+        }
     }
 }
