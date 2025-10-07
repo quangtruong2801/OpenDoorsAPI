@@ -20,7 +20,7 @@ namespace OpenDoorsAPI.Controllers
 
         // ---------------- GET LIST (mọi người xem được) ----------------
         [HttpGet]
-        [AllowAnonymous] // ✅ Cho phép truy cập không cần đăng nhập
+        [AllowAnonymous] //Cho phép truy cập không cần đăng nhập
         public async Task<ActionResult<List<Recruitment>>> GetList()
         {
             var recruitments = await _recruitmentService.GetListAsync();
@@ -41,7 +41,7 @@ namespace OpenDoorsAPI.Controllers
 
         // ---------------- CREATE (Admin Only) ----------------
         [HttpPost]
-        [Authorize(Roles = "admin")] // ✅ Yêu cầu role = admin
+        [Authorize(Roles = "admin")] 
         public async Task<ActionResult<Recruitment>> Create([FromBody] Recruitment recruitment)
         {
             recruitment.Id = null;

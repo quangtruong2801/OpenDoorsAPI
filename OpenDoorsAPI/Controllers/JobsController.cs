@@ -19,13 +19,13 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- GET ALL JOBS ----------------
-        [Authorize] // ✅ Bắt buộc đăng nhập mới xem được danh sách
+        [Authorize] // Bắt buộc đăng nhập mới xem được danh sách
         [HttpGet]
         public async Task<ActionResult<List<Job>>> Get() =>
             Ok(await _service.GetAllAsync());
 
         // ---------------- GET JOB BY ID ----------------
-        [Authorize] // ✅ Bắt buộc đăng nhập
+        [Authorize] // Bắt buộc đăng nhập
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Job>> GetById(string id)
         {
@@ -34,7 +34,7 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- CREATE JOB (Admin Only) ----------------
-        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được tạo job
+        [Authorize(Roles = "admin")] 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Job job)
         {
@@ -44,7 +44,7 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- UPDATE JOB (Admin Only) ----------------
-        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được sửa job
+        [Authorize(Roles = "admin")] 
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, [FromBody] Job job)
         {
@@ -57,7 +57,7 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- DELETE JOB (Admin Only) ----------------
-        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được xóa job
+        [Authorize(Roles = "admin")] 
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {

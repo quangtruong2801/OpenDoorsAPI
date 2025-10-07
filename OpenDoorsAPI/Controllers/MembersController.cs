@@ -19,13 +19,13 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- GET ALL MEMBERS ----------------
-        [Authorize] // ✅ Bắt buộc đăng nhập mới được xem danh sách
+        [Authorize] 
         [HttpGet]
         public async Task<ActionResult<List<Member>>> Get() =>
             Ok(await _service.GetAllAsync());
 
         // ---------------- GET MEMBER BY ID ----------------
-        [Authorize] // ✅ Bắt buộc đăng nhập
+        [Authorize] 
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Member>> GetById(string id)
         {
@@ -34,7 +34,7 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- CREATE MEMBER (Admin Only) ----------------
-        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được tạo
+        [Authorize(Roles = "admin")] 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Member member)
         {
@@ -44,7 +44,7 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- UPDATE MEMBER (Admin Only) ----------------
-        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được sửa
+        [Authorize(Roles = "admin")] 
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, [FromBody] Member member)
         {
@@ -57,7 +57,7 @@ namespace OpenDoorsAPI.Controllers
         }
 
         // ---------------- DELETE MEMBER (Admin Only) ----------------
-        [Authorize(Roles = "admin")] // ✅ Chỉ admin mới được xóa
+        [Authorize(Roles = "admin")] 
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {

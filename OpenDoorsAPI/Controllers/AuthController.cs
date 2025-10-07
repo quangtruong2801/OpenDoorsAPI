@@ -27,7 +27,7 @@ namespace OpenDoorsAPI.Controllers
                 throw new ArgumentNullException("JWT secret is missing!");
         }
 
-        // ✅ Đăng nhập
+        // Đăng nhập
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
@@ -38,7 +38,7 @@ namespace OpenDoorsAPI.Controllers
             if (member == null || !_memberService.VerifyPassword(request.Password, member.Password))
                 return Unauthorized("Email hoặc mật khẩu không đúng");
 
-            // ✅ Tạo JWT token
+            // Tạo JWT token
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtSecret);
 
@@ -71,7 +71,7 @@ namespace OpenDoorsAPI.Controllers
             });
         }
 
-        // ✅ Lấy thông tin user hiện tại từ JWT
+        // Lấy thông tin user hiện tại từ JWT
         [Authorize]
         [HttpGet("me")]
         public async Task<IActionResult> GetCurrentUser()
